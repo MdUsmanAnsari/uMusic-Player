@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uMusic Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <!-- Created Two Layout-Grid -->
+    <main class="main">
+
+            <!-- Navigation Section Start -->
+
+            <div class="navOpen-btn">
+                <span class="material-icons">
+                    menu
+                </span>
+            </div>
+
+            <section class="nav-sec"> 
+
+                <div class="nav-sec__logo">
+                    <h1 class="nav-sec__logo-inner">
+                        <span class="nav-sec__logo-inner--text">
+                            uMusics 
+                        </span>
+                        <span class="material-icons nav-sec__logo-inner--icon">
+                            equalizer
+                        </span> 
+                    </h1>
+                </div>
+
+                <div class="nav-sec__list-and-legal">
+
+                    <ul class="nav-sec__list">
+                        <li class="nav-sec__item">
+                            <span class="nav-sec__item__icon material-icons">
+                            home
+                            </span>
+                            <span class="nav-sec__item__text">Home</span>
+                        </li>
+                        <li class="nav-sec__item">
+                            <span class="nav-sec__item__icon material-icons">
+                                album
+                            </span>
+                            <span class="nav-sec__item__text">Allbums</span>
+                        </li>
+                        <li class="nav-sec__item">
+                            <span class="nav-sec__item__icon material-icons">
+                                mic
+                            </span>
+                            <span class="nav-sec__item__text">Artists</span>
+                        </li>
+                    </ul>
+    
+                    <footer class="nav-sec__copyright">
+                        <p class="copyright__text"> Copyright @ Md Usman Ansari 2020</p>
+                    </footer>
+
+                </div>
+
+                
+            </section>
+             <!-- Navigation Section End -->
+
+            <!-- Musics Section Start -->
+            <section class="music-sec"> 
+
+                <!-- Top Cover Start-->
+
+                <div class="cover">
+                     <img src="img/Cover-2.jpg" alt="" class="cover__img">
+                     <div class="cover__text">
+                         <h1 class="cover__title">Discover for you</h1>
+                           <a href="#" class="btn cover__play-btn"> 
+                                <span>Play Now</span>
+                                <span class="material-icons">
+                                play_circle_filled
+                               </span>  
+                        </a>
+                     </div>
+                 </div>
+
+                 <!-- Top Cover End-->
+
+            
+                 <div class="music-con">
+
+                    <h1 class="heading-sec">My Favroute</h1>
+
+                    <!-- Music List Scroll Start-->
+
+                    <div class="music-con__list scroll-bar-hide">
+
+                            <!-- <div class="music-con__item">
+                                <div class="music-con__img">
+                                    <img src="img/Cover-2.jpg" alt="">
+                                    <span class="music-con__play-btn">
+                                        <span class="material-icons play-btn">
+                                            play_circle_outline
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="music-list__text">
+                                    <h3 class="heading-3">   Gunaah  </h3>
+                                    <p class="music-artist-name">  Max Glover, Carl Brown </p>
+                                </div>
+                                
+                            </div> -->
+
+                            
+
+                    </div>
+
+                      <!-- Music List Scroll End-->
+                 </div>
+
+                 <div class="music-hor music-con">
+
+                    <h1 class="music-con__heading heading-sec">New Songs</h1>
+
+                    <div class="music-hor__list">
+
+                         <!-- <div class="music-hor__item">
+                            <div class="music-hor__item-inner">
+                                <img src="img/album - 3.png" class="music-hor__img">
+                                <h3 class="music-artist-name">Let me love</h3>
+                            </div>
+
+                            <div class="music-hor__item-inner"> 
+
+                                <p class="music-hor__music-duration">02 : 30</p>
+            
+                                <div class="music-hor__btn">
+                                    <span class="material-icons">
+                                        play_circle_filled
+                                       </span>  
+                                </div>
+                                                       
+                            </div>
+
+                        </div>                            -->
+
+                    </div>
+        
+
+                </div>
+
+                <div class="music-con">
+
+                    <h1 class="heading-sec">Some More</h1>
+
+                    <!-- Music List Scroll Start 2-->
+
+                    <div class="music-con__list scroll-bar-hide">
+
+                            <!-- <div class="music-con__item">
+                                <div class="music-con__img">
+                                    <img src="img/Cover-2.jpg" alt="">
+                                    <span class="music-con__play-btn">
+                                        <span class="material-icons play-btn">
+                                            play_circle_outline
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="music-list__text">
+                                    <h3 class="heading-3">   Gunaah  </h3>
+                                    <p class="music-artist-name">  Max Glover, Carl Brown </p>
+                                </div>
+                                
+                            </div>                             -->
+
+                    </div>
+
+                      <!-- Music List Scroll End 2-->
+                 </div>
+            
+            </section>
+            <!-- Musics Section End -->
+
+    </main>
+
+    <!-- Music { Play Btn  /  Progress Bar / }  Start-->
+
+    <section class="music-controller">
+
+        <div class="music-controller__progress-bar">
+            <span class="music-controller__progress-bar-fill"></span>
+        </div>
+
+        <div class="music-controller__list">
+
+                <div class="music-controller__item">
+                    <img src="img/Faded.jpg" alt="" class="music-controller__img audio-image">
+                    <h3  class="music-artist-name audio-name" style="width:9rem;">Let me love</h3>
+                </div>
+
+                <div class="music-controller__item"> 
+
+                    <div class="music-controller__btn audio-prev-btn">
+                        <span class="material-icons">
+                            skip_previous
+                        </span>
+                    </div>
+
+                    <div class="music-controller__btn audio-play-pause-btn">
+                        <span class="material-icons">
+                            play_circle_filled
+                           </span>  
+                    </div>
+                    <div class="music-controller__btn audio-next-btn">
+                        <span class="material-icons">
+                            skip_next
+                        </span>
+    
+                    </div>
+                   
+                </div>
+                <div class="music-controller__item phone-disable">
+
+                    <div class="music-controller__btn audio-shuffle">
+                        <span class="material-icons">
+                            shuffle
+                         </span>
+                    </div>
+                    <div class="music-controller__btn audio-volume">
+                        <span class="material-icons">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="music-controller__btn audio-repeat">
+                        <span class="material-icons">
+                            repeat
+                         </span>
+                    </div>
+
+                </div>
+        </div>
+
+
+
+    </section>
+
+  <!--- Open Music Player-->
+
+    <section class="audio-player" id="audio-player-fullscreen">
+        
+
+        <div class="audio-player__wrapper">
+
+            <img src="img/Yaara.jpg" alt="" class="audio-player__img audio-image">
+          
+            <div class="audio-player__text">
+                <h3 class="heading-3 audio-name">   Gunaah  </h3>
+                <p class="music-artist-name audio-singer-name">  Max Glover, Carl Brown </p>    
+            </div>  
+
+           <div class="audio-player__item audio-player__item--1">
+
+                <div class="audio-player__btn-top audio-shuffle">
+                    <span class="material-icons">
+                        shuffle
+                    </span>
+                </div>
+                <div class="audio-player__btn-top audio-volume">
+                    <span class="material-icons">
+                        volume_up
+                    </span>
+                </div>
+                <div class="audio-player__btn-top audio-repeat">
+                    <span class="material-icons">
+                        repeat
+                    </span>
+                </div>
+
+           </div>
+
+
+           <div class="audio-player__timing-update">
+                <h3 class="audio-time" id="current-duration"> 01 : 06 </h3>
+                <h3 class="audio-time" id="end-duration"> 01 : 06 </h3>
+          </div>
+           <div class="audio-player__item">
+                <div class="music-controller__progress-bar audio-player__progress-bar">
+                    <span class="music-controller__progress-bar-fill"></span>
+                </div>               
+           </div>
+
+           <div class="audio-player__item audio-player__item--playBtn">
+
+                <div class="audio-player__btn-bottom audio-prev-btn">
+                    <span class="material-icons">
+                        skip_previous
+                    </span>
+                </div>
+
+                <div class="audio-player__btn-bottom audio-play-pause-btn">
+                    <span class="material-icons">
+                        play_circle_filled
+                    </span>  
+                </div>
+                <div class="audio-player__btn-bottom audio-next-btn">
+                    <span class="material-icons">
+                        skip_next
+                    </span>
+                </div>
+
+           </div>
+   
+        </div>
+
+    </section>
+    
+     
+     <!-- Music { Play Btn  /  Progress Bar / }  End-->
+
+     <audio id="audio" class="audio" style="display: none;">
+        <source src="mp3/Gunaah.mp3"></source>
+    </audio>
+    <!-- Including External JavaScript File Here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

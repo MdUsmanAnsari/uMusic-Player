@@ -80,7 +80,7 @@ body {
   height: calc(100vh - 3.4rem);
   overflow: scroll;
   overscroll-behavior: contain;
-  padding-bottom: 4vh; }
+  padding-bottom: 10vh; }
 
 .heading-sec {
   padding: .6rem 0rem;
@@ -243,9 +243,8 @@ span {
       font-size: 2em; }
 
 .music-con__list {
-  display: flex;
-  overflow: hidden;
-  overflow-x: scroll;
+  overflow: auto;
+  white-space: nowrap;
   padding: 1rem !important; }
 
 .music-con__item {
@@ -401,7 +400,7 @@ span {
   .nav-sec__logo-inner--icon {
     font-size: 1.5em; }
   .nav-sec__list-and-legal {
-    height: 86vh;
+    height: 82%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }

@@ -217,7 +217,6 @@ window.onload = () =>{
 
             DOM.recommendedImage.src = `img/${getSongs.getRecommendedSong[0].image}`
 
-
             
             const swipeUp = new Hammer(DOM.openFullScreen);
             swipeUp.get('swipe').set({direction : Hammer.DIRECTION_ALL});
@@ -225,7 +224,7 @@ window.onload = () =>{
             const swipeDown = new Hammer(document.body);
             swipeDown.get('swipe').set({direction : Hammer.DIRECTION_ALL});
 
-        
+    
             swipeUp.on('swipeup',() =>{
                 navOpenAndClose(false)
                 DOM.openFullScreen.setAttribute('style','height : 100% ; opacity : 0;z-index:8')
@@ -583,11 +582,16 @@ window.onload = () =>{
 
     })(DOMStrings,getSongs);
 
-    const loader  = document.querySelector('.loading-sec');
-    loader.setAttribute('style','opacity : 0');
-    setTimeout(() => {
-        loader.remove();
-    }, 1000);
 
+    setTimeout(() => {
+
+        const loader  = document.querySelector('.loading-sec');
+        loader.setAttribute('style','opacity : 0');
+        setTimeout(() => {
+            loader.remove();
+        }, 1000);   
+        
+    }, 3000);
+ 
 
 }

@@ -61,9 +61,8 @@
    
 
     &__list{
-        display: flex;
-        overflow: hidden;
-        overflow-x: scroll;
+        overflow: auto;
+        white-space: nowrap;
         padding: 1rem !important;
     }
 

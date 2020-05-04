@@ -1,19 +1,10 @@
 :root{
-    // --color-primary : #eaeaea;
-    // --color-pink : #ff2e63;
-    // --color-dark:#252a34;
-    // --color-sky:#08d9d6;
-    // --color-white:hsl(0, 0%, 98%);
-    // --color-dark-light:rgb(255, 77, 13);
-
     --color-bg : #272624;
     --color-text : #fdfffe;
     --color-dark-1 : #333333;
     --color-dark-2 :#3d3d3f;
     --color-white:#eee;
     --color-pink : rgb(255, 77, 13);
-
-
 }
 
 $large : 56rem;
@@ -70,7 +61,7 @@ body{
     height: calc(100vh - 3.4rem);
     overflow: scroll;
     overscroll-behavior: contain;
-    padding-bottom: 9vh;
+    padding-bottom: 10vh;
 }
 
 

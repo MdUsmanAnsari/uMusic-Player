@@ -242,6 +242,12 @@ window.onload = () =>{
             navBtn.addEventListener('click', () => navOpenAndClose(true));
 
             DOM.musicContainer.addEventListener('click', () => navOpenAndClose(false));
+
+            DOM.openFullScreen.addEventListener('click',() => navOpenAndClose(false));
+        
+            DOM.musicContainer.addEventListener('touchstart',() => navOpenAndClose(false));
+
+            DOM.openFullScreen.addEventListener('touchstart',() => navOpenAndClose(false));
         
             const navOpenAndClose = (isClose) =>{
 

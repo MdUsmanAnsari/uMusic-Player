@@ -131,7 +131,7 @@ span {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: var(--color-dark-1);
   z-index: 100;
   display: flex;
@@ -139,7 +139,8 @@ span {
   align-items: center;
   flex-direction: column;
   color: var(--color-white);
-  line-height: 2rem; }
+  line-height: 2rem;
+  transition: opacity 1s ease-in; }
   .loading-sec__text {
     letter-spacing: 2px; }
   .loading-sec__u {
@@ -148,6 +149,9 @@ span {
     animation: loading 3s infinite cubic-bezier(0.19, 1, 0.22, 1); }
   .loading-sec__wait-text {
     animation: loading-2 4s infinite; }
+  .loading-sec__legal {
+    position: absolute;
+    bottom: 5vh; }
 
 .music-controller {
   padding: 1.2rem;

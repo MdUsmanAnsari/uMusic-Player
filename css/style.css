@@ -58,7 +58,7 @@ body {
 .main {
   display: grid;
   grid-template-columns: 14rem 1fr;
-  height: 100vh; }
+  height: 100%; }
   @media only screen and (max-width: 56rem) {
     .main {
       display: block; } }

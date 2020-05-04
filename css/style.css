@@ -131,7 +131,7 @@ span {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--color-dark-1);
   z-index: 100;
   display: flex;
@@ -156,10 +156,10 @@ span {
 .music-controller {
   padding: 1.2rem;
   background-color: var(--color-dark-2);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 99%;
   height: 4.6rem;
   border-radius: 1rem 1rem 0rem 0rem;
   overflow: hidden;

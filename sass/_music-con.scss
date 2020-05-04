@@ -1,10 +1,10 @@
 .music-controller{
     padding: 1.2rem;
     background-color: var(--color-dark-2);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 99%;
     height: 4.6rem;
     border-radius:1rem 1rem 0rem 0rem;
     overflow: hidden;

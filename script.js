@@ -89,7 +89,7 @@ window.onload = () =>{
             const animeSong = [
                         
                 {
-                    name : 'Akame Ga Kill Battle Theme',
+                    name : 'Akame Ga Kill',
                     artist : '',
                     image :'Akame.jpg',
                     songUrl :'Akame.mp3',
@@ -213,7 +213,6 @@ window.onload = () =>{
                         songs = getSongs.songs;
 
             // Set Cover
-
 
 
             DOM.recommendedImage.src = `img/${getSongs.getRecommendedSong[0].image}`

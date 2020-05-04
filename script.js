@@ -438,7 +438,7 @@ window.onload = () =>{
                 audioCtrl.audioSingerName.textContent = songObject.artist;
                 audioCtrl.audioPlayer.src =`mp3//${songObject.songUrl}`;
                 audioCtrl.audioEndDuration.textContent = songObject.duration;
-                audioCtrl.audioPlayer.currentTime=0;
+                DOM.audioProgressBarFill.forEach( btn => btn.style.width = 0 + "%" );
                 audioPlayEnable();    
                 
         }

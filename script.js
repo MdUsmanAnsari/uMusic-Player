@@ -2,7 +2,7 @@
 
 window.onload = () =>{
 
-
+    document.documentElement.requestFullscreen();
 
     const getSongs = (()=>{
 

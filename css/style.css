@@ -80,7 +80,7 @@ body {
   height: calc(100vh - 3.4rem);
   overflow: scroll;
   overscroll-behavior: contain;
-  padding-bottom: 4vh; }
+  padding-bottom: 8vh; }
 
 .heading-sec {
   padding: .6rem 0rem;

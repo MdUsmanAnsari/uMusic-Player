@@ -1,0 +1,67 @@
+.music-controller{
+    padding: 1.2rem;
+    background-color: var(--color-dark-2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.6rem;
+    border-radius:1rem 1rem 0rem 0rem;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &__progress-bar{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 4px;
+        width:100%;
+        transform: translateX(-50%);
+        border-radius:1rem;
+        background-color: var(--color-dark-1);
+        cursor: pointer;
+    }
+
+    &__progress-bar-fill{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width:0%;
+        border-radius:1rem;
+        background-color: var(--color-pink);
+        transition: width .6s cubic-bezier(0, 0, 0, 1);
+    }
+
+    &__img{
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+    }
+
+    &__list{
+        padding-top: 6px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: var(--color-white);
+    }
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+
+    &__btn{
+        font-size: 2em;
+        margin-left: 1rem;
+    }
+
+
+ 
+
+}

@@ -1,0 +1,71 @@
+
+.nav-open-animation{
+    animation: navOpenAnimation .6s cubic-bezier(1, 0, 0, 1) forwards;
+}
+
+.nav-close-animation{
+    animation: navCloseAnimation .6s cubic-bezier(1, 0, 0, 1);
+}
+
+.audioSuffle{
+    color: var(--color-pink);
+}
+
+
+@keyframes navOpenAnimation{
+
+    100%{
+        width: 14rem;
+    }
+}
+
+
+@keyframes navCloseAnimation{
+
+    0%{
+        width: 14rem;
+    }
+
+    100%{
+        width: 0;
+    }
+}
+
+
+@keyframes playingMusic {
+
+        100%{
+            transform: rotate(360deg);
+        }
+
+}
+
+
+@keyframes loading{
+
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+
+    50%{
+        transform: translateY(-4rem) rotate(0);
+    }
+
+    80%{
+        transform: translateY(-4rem) rotate(360deg);
+    }
+
+}
+
+
+@keyframes loading-2{
+
+    0%,100%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+}

@@ -2,8 +2,6 @@
 
 window.onload = () =>{
 
-
-
     const getSongs = (()=>{
 
 
@@ -204,6 +202,9 @@ window.onload = () =>{
 
     const UIController = ((DOMStrings,AnimationClass,getSongs)=>{
 
+
+        
+
                 
             const DOM = DOMStrings.DOMString , 
                         navMenu = DOM.navMenu ,
@@ -212,6 +213,8 @@ window.onload = () =>{
                         songs = getSongs.songs;
 
             // Set Cover
+
+
 
             DOM.recommendedImage.src = `img/${getSongs.getRecommendedSong[0].image}`
 
@@ -226,13 +229,13 @@ window.onload = () =>{
         
             swipeUp.on('swipeup',() =>{
                 navOpenAndClose(false)
-                DOM.openFullScreen.setAttribute('style','height : 100% ; opacity : 0;')
+                DOM.openFullScreen.setAttribute('style','height : 100% ; opacity : 0;z-index:8')
                 DOM.audioFullScreen.setAttribute('style','height : 100% ; opacity : 1 ; z-index:10')
             });
 
             swipeDown.on('swipedown', () =>{
-                DOM.openFullScreen.setAttribute('style','height : 4.6rem; opacity : 1;')
-                DOM.audioFullScreen.setAttribute('style','height : 0% ; opacity :0;z-index:8')
+                DOM.openFullScreen.setAttribute('style','height : 4.6rem; opacity : 1;z-index:10')
+                DOM.audioFullScreen.setAttribute('style','height :0 ; opacity :0;z-index:8')
             });
             
             // Navigation Start 
@@ -436,7 +439,8 @@ window.onload = () =>{
                 audioCtrl.audioSingerName.textContent = songObject.artist;
                 audioCtrl.audioPlayer.src =`mp3//${songObject.songUrl}`;
                 audioCtrl.audioEndDuration.textContent = songObject.duration;
-                audioPlayEnable();        
+                audioPlayEnable();    
+                
         }
 
 
@@ -573,7 +577,11 @@ window.onload = () =>{
 
     })(DOMStrings,getSongs);
 
-    document.querySelector('.loading-sec').remove();
+    const loader  = document.querySelector('.loading-sec');
+    loader.setAttribute('style','opacity : 0');
+    setTimeout(() => {
+        loader.remove();
+    }, 1000);
 
 
 }

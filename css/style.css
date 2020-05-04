@@ -76,9 +76,10 @@ body {
       z-index: 1; } }
 
 .music-sec {
-  height: 90vh;
+  height: 50vh;
+  overflow: auto;
   overscroll-behavior: contain;
-  overflow-y: scroll; }
+}
 
 .heading-sec {
   padding: .6rem 0rem;

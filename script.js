@@ -304,20 +304,22 @@ window.onload = () =>{
 
             const addListUI = ( listChange , i)  =>{ 
 
-                DOM.audioListParent[listChange].innerHTML += `<div class="music-con__item">
-                                                <div class="music-con__img">
-                                                    <img src="img/${songs[i].image}" alt="">
-                                                    <span class="music-con__play-btn">
-                                                        <span class="material-icons play-btn">
-                                                            play_circle_outline
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                                <div class="music-list__text">
-                                                    <h3 class="heading-3"> ${songs[i].name} </h3>
-                                                    <p class="music-artist-name">  ${songs[i].artist} </p>
-                                                </div>
-                                            </div>`;
+                const content = `<div class="music-con__item">
+                                <div class="music-con__img">
+                                    <img src="img/${songs[i].image}" alt="">
+                                    <span class="music-con__play-btn">
+                                        <span class="material-icons play-btn">
+                                            play_circle_outline
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="music-list__text">
+                                    <h3 class="heading-3"> ${songs[i].name} </h3>
+                                    <p class="music-artist-name">  ${songs[i].artist} </p>
+                                </div>
+                            </div>`;
+
+                DOM.audioListParent[listChange].insertAdjacentHTML('beforeend',content); 
             }
 
                 for(let i = 0 ; i < 6 ; i++ ){
@@ -332,16 +334,18 @@ window.onload = () =>{
             // List UI Added
 
             for(let i in getSongs.animeSong){
+
+                    const content = `<div class="music-hor__item">
+                                        <div class="music-hor__item-inner">
+                                            <img src="img/${getSongs.animeSong[i].image}" class="music-hor__img">
+                                            <h3 class="music-artist-name">${getSongs.animeSong[i].name}</h3>
+                                        </div>
+                                        <div class="music-hor__item-inner"> 
+                                            <p class="music-hor__music-duration">${getSongs.animeSong[i].duration}</p>                  
+                                        </div>
+                                    </div> `;
                     
-                    DOM.audioHorListParent.innerHTML += `<div class="music-hor__item">
-                                                        <div class="music-hor__item-inner">
-                                                            <img src="img/${getSongs.animeSong[i].image}" class="music-hor__img">
-                                                            <h3 class="music-artist-name">${getSongs.animeSong[i].name}</h3>
-                                                        </div>
-                                                        <div class="music-hor__item-inner"> 
-                                                            <p class="music-hor__music-duration">${getSongs.animeSong[i].duration}</p>                  
-                                                        </div>
-                                                    </div> `;
+                    DOM.audioHorListParent.insertAdjacentHTML('beforeend',content); 
 
             }
 
@@ -384,8 +388,9 @@ window.onload = () =>{
 
         DOM.audioProgressBar.forEach(btn =>{
                 btn.addEventListener("click", function seek(e){
-                    var percent = e.offsetX / this.offsetWidth;
-                    player.currentTime = percent * player.duration;
+                    let percent = e.offsetX / this.offsetWidth;
+                    let seekTime = percent * player.duration;
+                    player.currentTime = isNaN(seekTime) ? 0.0 : seekTime;
                     DOM.audioProgressBar.value = percent / 100;
                 });
         });

@@ -238,15 +238,15 @@ window.onload = () =>{
             
             // Navigation Start 
             
-            navBtn.addEventListener('click', () => navOpenAndClose(true));
+            navBtn.addEventListener('click',navOpenAndClose.bind(null,true));
 
-            DOM.musicContainer.addEventListener('click', () => navOpenAndClose(false));
+            DOM.musicContainer.addEventListener('click',navOpenAndClose.bind(null,false));
 
-            DOM.openFullScreen.addEventListener('click',() => navOpenAndClose(false));
+            DOM.openFullScreen.addEventListener('click',navOpenAndClose.bind(null,false));
         
-            DOM.musicContainer.addEventListener('touchstart',() => navOpenAndClose(false));
+            DOM.musicContainer.addEventListener('touchstart',navOpenAndClose.bind(null,false));
 
-            DOM.openFullScreen.addEventListener('touchstart',() => navOpenAndClose(false));
+            DOM.openFullScreen.addEventListener('touchstart',navOpenAndClose.bind(null,false));
         
             const navOpenAndClose = (isClose) =>{
 

@@ -223,20 +223,8 @@ window.onload = () =>{
 
             const swipeDown = new Hammer(document.body);
             swipeDown.get('swipe').set({direction : Hammer.DIRECTION_ALL});
-
-    
-            swipeUp.on('swipeup',() =>{
-                navOpenAndClose(false)
-                DOM.openFullScreen.setAttribute('style','height : 100% ; opacity : 0;z-index:8')
-                DOM.audioFullScreen.setAttribute('style','height : 100% ; opacity : 1 ; z-index:10')
-            });
-
-            swipeDown.on('swipedown', () =>{
-                DOM.openFullScreen.setAttribute('style','height : 4.6rem; opacity : 1;z-index:10')
-                DOM.audioFullScreen.setAttribute('style','height :0 ; opacity :0;z-index:8')
-            });
-            
-            // Navigation Start 
+        
+                 // Navigation Start 
               const navOpenAndClose = (isClose) =>{
 
                     const isNavBtnVisible = window.getComputedStyle(navBtn).visibility;
@@ -252,6 +240,20 @@ window.onload = () =>{
                     }
 
                 }
+
+    
+            swipeUp.on('swipeup',() =>{
+                navOpenAndClose(false)
+                DOM.openFullScreen.setAttribute('style','height : 100% ; opacity : 0;z-index:8')
+                DOM.audioFullScreen.setAttribute('style','height : 100% ; opacity : 1 ; z-index:10')
+            });
+
+            swipeDown.on('swipedown', () =>{
+                DOM.openFullScreen.setAttribute('style','height : 4.6rem; opacity : 1;z-index:10')
+                DOM.audioFullScreen.setAttribute('style','height :0 ; opacity :0;z-index:8')
+            });
+            
+           
             
             navBtn.addEventListener('click',navOpenAndClose.bind(null,true));
 

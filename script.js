@@ -237,6 +237,21 @@ window.onload = () =>{
             });
             
             // Navigation Start 
+              const navOpenAndClose = (isClose) =>{
+
+                    const isNavBtnVisible = window.getComputedStyle(navBtn).visibility;
+
+                    if(window.getComputedStyle(navMenu).width === '0px' && isClose ==false)
+                        return;
+
+                    if(isNavBtnVisible === 'visible'){
+                        navMenu.classList.remove(AnimationClass.nav.open);
+                        navMenu.classList.remove(AnimationClass.nav.close);
+                        const animation = isClose ? AnimationClass.nav.open : AnimationClass.nav.close;
+                        navMenu.classList.add(animation);
+                    }
+
+                }
             
             navBtn.addEventListener('click',navOpenAndClose.bind(null,true));
 
@@ -248,21 +263,7 @@ window.onload = () =>{
 
             DOM.openFullScreen.addEventListener('touchstart',navOpenAndClose.bind(null,false));
         
-            const navOpenAndClose = (isClose) =>{
-
-                const isNavBtnVisible = window.getComputedStyle(navBtn).visibility;
-                
-                if(window.getComputedStyle(navMenu).width === '0px' && isClose ==false)
-                    return;
-
-                if(isNavBtnVisible === 'visible'){
-                    navMenu.classList.remove(AnimationClass.nav.open);
-                    navMenu.classList.remove(AnimationClass.nav.close);
-                    const animation = isClose ? AnimationClass.nav.open : AnimationClass.nav.close;
-                    navMenu.classList.add(animation);
-                }
-        
-            }
+          
             // Navigation End 
 
             // Music Horizonatal Slider Start
@@ -580,10 +581,14 @@ window.onload = () =>{
             })
         })
 
+
+
         updateAudio(0); //set First Song
         audioPlayDisable();
 
     })(DOMStrings,getSongs);
+
+
     setTimeout(() => {
 
         const loader  = document.querySelector('.loading-sec');
@@ -593,4 +598,6 @@ window.onload = () =>{
         }, 1000);   
         
     }, 3000);
- }
+ 
+
+}
